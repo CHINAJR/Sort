@@ -10,15 +10,12 @@ def GenerateRandomList(number, size):
 
 def Heap_sort(alist):
 	size = len(alist)
-	build_heap(alist,size)
+	for i in range(0,(int(size/2)))[::-1]:
+		adjust_heap(alist,i,size)
 	for i in range(0,size)[::-1]:
 		alist[i],alist[0] = alist[0],alist[i]
 		adjust_heap(alist,0,i)
 	return alist
-def build_heap(alist,size):
-	for i in range(0,(int(size/2)))[::-1]:
-		adjust_heap(alist,i,size)
-
 
 def adjust_heap(alist,i,size):
 	lchild = i*2+1
@@ -41,4 +38,5 @@ if __name__ == '__main__':
 		standard_l = sorted(l)
 		a = Heap_sort(l)
 		print(a == standard_l)
+
 
