@@ -36,7 +36,3 @@ if __name__ == '__main__':
 		standard_l = sorted(l)
 		a = Heap_sort(l)
 		print(a == standard_l)
-
-
-
-
